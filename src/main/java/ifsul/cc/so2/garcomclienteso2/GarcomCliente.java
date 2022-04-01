@@ -23,7 +23,8 @@ class Bar {
     private boolean disponivel = false; //define se esta disponivel ou nao 
 
     public synchronized int get() {
-        while (disponivel == false) { //se nao estiver disponivel, entra em espera
+        
+        while (disponivel == false) { //se nao estiver disponível, entra em espera
             try {
                 wait();
             } catch (InterruptedException e) {
